@@ -10,3 +10,20 @@ wheels/
 .venv
 
 
+# Datasets
+Battery_life_Dataset/
+
+
+# Preparation and analysis files
+projectplan.ipynb
+Data_checking.ipynb
+SOH_calc.ipynb
+
+# Others
+test.ipynb
+
+# preparation files
+0_*.ipynb
+
+# data files
+*.pkl
