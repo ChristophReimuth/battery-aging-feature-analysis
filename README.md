@@ -17,11 +17,16 @@ A machine learning project for State of Health (SOH) prediction using public lit
 - Tongji (TJU)
 - MIT / Severson
 
+## Requirements
+
+- Python 3.13
+- pip
+
 ## Installation
 
 ```bash
-git clone https://github.com/username/Battery-SOH.git
-cd Battery-SOH
+git clone https://github.com/ChristophReimuth/battery-aging-feature-analysis.git
+cd battery-aging-feature-analysis
 pip install -r requirements.txt
 ```
 
@@ -38,11 +43,10 @@ Battery-SOH/
 │
 ├── data/
 ├── notebooks/
-├── src/
-├── models/
+├── src/battery_aging
 ├── figures/
-├── README.md
-└── requirements.txt
+├── pyproject.toml
+└── README.md
 ```
 
 ## Results

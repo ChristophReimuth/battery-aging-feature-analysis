@@ -1,5 +1,5 @@
 [project]
-name = "vs-studio-projekte"
+name = "battery-aging-feature-analysis"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -18,4 +18,4 @@ requires = ["uv_build>=0.8.9"]
 build-backend = "uv_build"
  
 [tool.uv.build-backend]
-module-name = "core"
+module-name = "battery_aging"
