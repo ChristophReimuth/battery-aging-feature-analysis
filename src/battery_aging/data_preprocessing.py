@@ -6,31 +6,41 @@ import random
 import matplotlib.pyplot as plt
 
 
-def load_dataset(Dataset):
+def load_dataset(pathstring, n_files="all", seed=42):
 
     """
     Loads the dataset from the specified folder and returns a list of datasets.
 
     Arguments:
-    Dataset -- Name of the dataset folder to load.
+    pathstring -- Path to the dataset folder to load.
+    n_files -- Number of files to load (default is "all" to load all files).
+    seed -- Random seed for reproducibility (default is 42).
 
     Returns:
     A list of datasets loaded from the specified folder. Each dataset is a dictionary containing cycle data
     """
 
 
-    data_folder = Path("Battery_life_Dataset/",Dataset)
-
+    data_folder = Path(pathstring)
     pkl_files = list(data_folder.glob("*.pkl"))
-    selected_files = pkl_files  # Use all files for now, you can uncomment the next line to select a random sample
-    # selected_files = random.sample(pkl_files, 100)
-    return selected_files
+
+    if n_files == "all":
+        selected_files = pkl_files
+    else:
+        if n_files > len(pkl_files):
+            raise ValueError(
+                f"Requested {n_files} files but only {len(pkl_files)} are available."
+            )
+
+        random.seed(seed)
+        selected_files = random.sample(pkl_files, n_files)
 
     datasets = []
 
-    # for pkl_file in selected_files:
-    #     with open(pkl_file, "rb") as f:
-    #         datasets.append(pickle.load(f))
+    for pkl_file in selected_files:
+        with open(pkl_file, "rb") as f:
+            datasets.append(pickle.load(f))
+
 
     return datasets
 
