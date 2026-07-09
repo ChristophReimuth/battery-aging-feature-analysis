@@ -282,12 +282,6 @@ By comparison, simple statistical descriptors of voltage and current, as well as
   <img src="figures/permutation_top3_HUST.png" alt="Top permutation feature importance for the HUST dataset" width="800">
 </p>
 
-A complete ranking of all engineered features is shown below.
-
-<p align="center">
-  <img src="figures/permutation_report_vtime_full_HUST.png" alt="Complete permutation feature importance report for the HUST dataset" width="800">
-</p>
-
 
 ## Results (Tongji Dataset)
 
@@ -333,7 +327,7 @@ The best-performing model on the Tongji dataset was the **Voltage + Time feature
 
 Compared to the HUST dataset, the prediction accuracy is lower, indicating that the Tongji dataset presents a more challenging prediction task. Voltage-based features remain the most informative feature group, but individual voltage similarity metrics and current-based features provide limited predictive value when used alone.
 
-![Feature Group Comparison](figures/feature_group_comparison_TONGJI.png)
+![Feature Group Comparison](figures/feature_group_comparison_Tongji.png)
 
 
 ### Permutation Feature Importance (Tongji Dataset)
@@ -349,13 +343,7 @@ The **Full Feature Set model** shows a similar pattern. Discharge duration remai
 Compared to the HUST dataset, the Tongji results indicate a shift in feature importance: while voltage curve area differences were the strongest predictors for HUST, the Tongji dataset is primarily driven by **discharge duration and voltage curve alignment features**. This suggests that degradation characteristics differ between datasets and that the most informative features depend on the underlying battery population and measurement conditions.
 
 <p align="center">
-  <img src="figures/permutation_top3_TONGJI.png" alt="Top permutation feature importance for the Tongji dataset" width="800">
-</p>
-
-A complete ranking of all engineered features is shown below.
-
-<p align="center">
-  <img src="figures/permutation_report_vtime_full_TONGJI.png" alt="Complete permutation feature importance report for the Tongji dataset" width="800">
+  <img src="figures/permutation_top3_Tongji.png" alt="Top permutation feature importance for the Tongji dataset" width="800">
 </p>
 
 ## References
