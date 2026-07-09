@@ -60,35 +60,48 @@ The engineered feature tables generated during preprocessing are stored in the `
 ## Requirements
 
 - Python 3.13
-- pip
+- uv package manager
+
+The project dependencies are defined in `pyproject.toml`.
 
 ## Installation
 
-Clone the repository
+This project uses `uv` for dependency management.
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/ChristophReimuth/battery-soh-prediction.git
 cd battery-soh-prediction
 ```
 
-Create and activate a virtual environment (recommended)
+Install dependencies and start Jupyter:
 
 ```bash
-python -m venv .venv
+uv sync
+uv run jupyter notebook
+```
+
+`uv run` automatically uses the project's virtual environment, no manual activation required.
+
+<details>
+<summary>Manual venv activation (optional)</summary>
+
+If you prefer to activate the environment yourself:
+
+```bash
+uv sync
 
 # Windows
 .venv\Scripts\activate
 
 # Linux / macOS
 source .venv/bin/activate
+
+jupyter notebook
 ```
 
-Install the required packages
-
-```bash
-pip install -r requirements.txt
-```
-
+</details>
 
 ## Usage
 
@@ -128,7 +141,7 @@ Run the notebooks in the following order:
 ## Project Workflow
 
 ```text
-Battery Cycling Data
+BatteryLife Dataset (BatteryML)
         │
         ▼
 Data Preprocessing
@@ -229,6 +242,7 @@ The repository includes visualizations of
 
 ## References
 
-The battery data used in this project originates from the BatteryLife dataset developed by the BatteryML project.
+The battery data used in this project originates from the BatteryLife dataset developed by the BatteryML project [arXiv:2502.18807](https://arxiv.org/abs/2502.18807).
 
 If you use this repository for research, please also cite the original dataset and the corresponding publications.
+

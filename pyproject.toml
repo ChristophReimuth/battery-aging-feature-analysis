@@ -1,7 +1,7 @@
 [project]
 name = "battery-aging-feature-analysis"
 version = "0.1.0"
-description = "Add your description here"
+description = "Machine learning based analysis of battery aging behavior and State of Health prediction using engineered features."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
