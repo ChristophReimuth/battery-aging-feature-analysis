@@ -300,11 +300,18 @@ Model performance was evaluated using:
 
 ### Baseline Model (Linear Regression)
 
-> **Note:** The Tongji dataset results are evaluated independently from the HUST dataset. Due to differences in battery cells, measurement conditions, and degradation behavior, the absolute prediction performance is not directly comparable without considering dataset characteristics.
+The baseline Linear Regression model was evaluated on the Tongji test set before applying more advanced Random Forest models.
 
-The Linear Regression baseline was used as a reference model before evaluating more advanced Random Forest models.
+The model achieved the following performance:
 
-*(Insert Linear Regression results here if available.)*
+| Metric | Value |
+|--------|------:|
+| Mean Absolute Error (MAE) | **0.0273** |
+| Coefficient of Determination (R²) | **0.8248** |
+
+The baseline model already demonstrates that the engineered features contain substantial predictive information for battery State of Health (SOH). With an **R² value of 0.8248**, the linear model explains more than **82% of the variance** in the observed SOH values.
+
+However, the subsequent Random Forest models reveal that the relationship between engineered battery features and SOH is partly nonlinear. By capturing more complex feature interactions, the Random Forest models improve the prediction performance for selected feature combinations.
 
 ### Random Forest Models (Tongji Dataset)
 
