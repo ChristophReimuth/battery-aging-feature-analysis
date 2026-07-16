@@ -150,13 +150,13 @@ def feature_engineering_2(datasets):
                 "cell_id": data["cell_id"],
                 "cycle_number": cycle["cycle_number"],
 
-                # bisherige Features
+                # simple shape features
                 "V_range": np.max(v) - np.min(v),
                 "V_slope_mean": np.mean(np.abs(dv)),
                 "V_curvature": np.mean(np.abs(d2v)),
                 "V_n_peaks": len(peaks),
 
-                # neue DTW-Alternativen
+                # advanced shape features
                 "RMSE_V": rmse_v,
                 "AreaDiff_V": area_diff_v,
                 "Corr_V": corr_v,

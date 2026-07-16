@@ -19,6 +19,8 @@ def run_rf_gridsearch(
     X = data[feature_columns]
     y = data[target_column]
 
+    df = df.sort_values(["cell_id", "cycle_number"]).reset_index(drop=True)
+
     # Train/Test Split
     split_idx = int(len(data) * 0.8)
 

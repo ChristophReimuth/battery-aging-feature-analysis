@@ -66,10 +66,17 @@ def reduce_cycles(cycle_data, step=20, keep_cycles=[5, 10, 15, 30]):
     as cycles within keep_cycles. Additionally, it keeps cycles whose cycle numbers are multiples of the specified step size.
 
     """
-    return [
+def reduce_cycles(cycle_data, step=20, keep_cycles=[5, 10, 15, 30]):
+
+    filtered = [
         cycle
         for cycle in cycle_data
         if cycle["cycle_number"] <= 5
         or cycle["cycle_number"] in keep_cycles
         or cycle["cycle_number"] % step == 0
     ]
+
+    return sorted(
+        filtered,
+        key=lambda x: x["cycle_number"]
+    )
